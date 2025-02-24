@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday Queen Mary Kamau!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #E3C6A5, #C9A58D);
+            text-align: center;
+            color: white;
+            padding: 50px;
+        }
+        .container {
+            display: none;
+        }
+        .locked {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <audio id="backgroundMusic" loop>
+        <source src="million_little_miracles_elevation_worship_maverick_city_mp3_67036.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="lockedMessage" class="locked">Come back at midnight! 🎉</div>
+    <div id="birthdayPage" class="container">
+        <h1>Happy 20th Birthday Queen Mary Kamau! 🎂</h1>
+        <p>Happy 20th birthday to the most gorgeous, beautiful, kind, loving, warm-hearted human with a heart of gold and a stunning smile. Cheers to more life! 🥂</p>
+        
+        <h2>Countdown to Midnight! ⏳</h2>
+        <p id="countdown"></p>
+        
+        <h2>Photo Slideshow 📸</h2>
+        <img src="IMG20241229121414.jpg" width="300">
+        <img src="IMG20240811130257.jpg" width="300">
+        <img src="IMG20240724170640.jpg" width="300">
+        <img src="IMG20240723144916.jpg" width="300"> 
+        <img src="IMG-20240616-WA0005.jpg" width="300">
+        <img src="IMG-20240510-WA0054.jpg" width="300">
+        <img src="IMG-20240430-WA0031.jpg" width="300">
+        <img src="IMG-20240414-WA0012.jpg" width="300">
+        <img src="IMG-20231221-WA0029.jpg" width="300">
+        <img src="IMG-20231218-WA0020.jpg" width="300">
+        <img src="IMG-20231126-WA0005.jpg" width="300">
+        <img src="IMG_20230915_154052_843.jpg" width="300">
+        <img src="IMG_20230915_154030_212.jpg" width="300">
+        
+        <h2>Messages from Friends & Family 💌</h2>
+        <p><strong>Brandon:</strong> Queen Mary, you are the most radiant and beautiful soul! Your kindness, warmth, and love light up my world. May this year bring you endless joy, success, and unforgettable memories! 🎉❤️</p>
+        
+        <h2>20 Reasons Why You Own This Day! ✨</h2>
+        <ul>
+            <li>You are a shining star! 🌟</li>
+            <li>Your smile lights up the world. 😊</li>
+            <li>You bring love and kindness everywhere you go. ❤️</li>
+            <li>Your heart is made of gold. 💛</li>
+            <li>You inspire everyone around you. 🌈</li>
+            <li>You make life more fun! 🎉</li>
+            <li>Your laugh is contagious. 😆</li>
+            <li>Today is YOUR special day! 🎂</li>
+            <li>We all love and cherish you. 🥰</li>
+            <li>You deserve all the happiness! 🎊</li>
+            <li>You’re an amazing friend. 👭</li>
+            <li>You're intelligent and strong. 💪</li>
+            <li>Your energy is magical. ✨</li>
+            <li>Life is brighter because of you! 🌞</li>
+            <li>You make every moment special. 🕰️</li>
+            <li>You bring peace and positivity. ☮️</li>
+            <li>You have a heart of gold. 💖</li>
+            <li>Your dreams are limitless. 🚀</li>
+            <li>You are one of a kind! 🌍</li>
+            <li>Happy Birthday, Queen Mary! 🎁</li>
+        </ul>
+        
+        <h2>Birthday Poem 📜</h2>
+        <p>On this day so bright and true, <br> The world is lucky to have you. <br> A heart so pure, a smile so wide, <br> You shine like stars in the midnight sky. ✨</p>
+        
+        <h2>Birthday Jokes 😂</h2>
+        <p>Why did the birthday cake go to the doctor? Because it was feeling crumby! 🎂😂</p>
+        <p>What does a birthday candle say after being lit? "I’m on fire!" 🔥😂</p>
+    </div>
+    
+    <script>
+        const birthday = new Date('2025-02-25T00:00:00');
+        const now = new Date();
+        if (now >= birthday) {
+            document.getElementById("lockedMessage").style.display = "none";
+            document.getElementById("birthdayPage").style.display = "block";
+            document.getElementById("backgroundMusic").play();
+        }
+        
+        function updateCountdown() {
+            const now = new Date();
+            const timeDiff = birthday - now;
+            if (timeDiff > 0) {
+                const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+                const seconds = Math.floor((timeDiff / 1000) % 60);
+                document.getElementById("countdown").innerText = `${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById("countdown").innerText = "It's your birthday! 🎉";
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
